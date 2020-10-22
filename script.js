@@ -2,16 +2,22 @@
 
 var emailList =["@gmail", "@libero", "@virgilio", "@hotmail", "@icloud"];
 var question = prompt("inserire la tua e-mail");
-
+var found = 'email sbagliata';
 for (var z = 0; z < emailList.length; z++){
 
   if  (emailList[z] == question ){
-     var good = 'email corretta';
-     document.getElementById("messaggio").innerHTML = good ;
+     var found = 'email corretta';
   }
+}
+document.getElementById("messaggio").innerHTML = found  ;
 
-    var bad = 'email sbagliata';
-    document.getElementById("messaggio").innerHTML = bad ;
+MIN = 1;
+MAX = 7;
 
-  
-};
+var playerOne = Math.floor(Math.random() * (MAX - MIN));
+var playerTwo = Math.floor(Math.random() * (MAX - MIN));
+
+
+document.getElementById("giocuno").innerHTML = playerOne;
+
+document.getElementById("giocdue").innerHTML = playerTwo;
